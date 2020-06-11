@@ -3,8 +3,7 @@ export const getData = async (
   difficulty = 'easy',
   category = '9',
 ) => {
-  const URL = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&category=${category}&type=multiple`;
-
+  const URL = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&category=${category}`;
   let response = await fetch(URL);
   let data = await response.json();
   return data;
