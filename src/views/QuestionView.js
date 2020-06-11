@@ -1,5 +1,11 @@
 import React, {useState, useLayoutEffect} from 'react';
-import {SafeAreaView, Dimensions, ActivityIndicator} from 'react-native';
+import {
+  SafeAreaView,
+  Dimensions,
+  StyleSheet,
+  ActivityIndicator,
+  ImageBackground,
+} from 'react-native';
 import {connect} from 'react-redux';
 import * as actions from '../redux/actions';
 
@@ -11,6 +17,7 @@ import Score from '../components/Score';
 import QuestionTracker from '../components/QuestionTracker';
 import Question from '../components/Question';
 
+const bgImage = require('../assets/background.png');
 const QuestionView = ({
   currentQuestionNumber,
   currentQuestion,
@@ -59,33 +66,43 @@ const QuestionView = ({
   }, [fetchQuestions, selectedCategoryId.value, selectedDifficulty]);
 
   return (
-    <Column flex={1} bg="white" as={SafeAreaView}>
-      {gameOver ? navigation.navigate('WrongAnswer') : null}
+    <ImageBackground source={bgImage} style={styles.container}>
+      <Column flex={1} as={SafeAreaView}>
+        {gameOver ? navigation.navigate('WrongAnswer') : null}
 
-      {loading ? (
-        <ActivityIndicator />
-      ) : (
-        <Column>
-          <Row justifyContent="space-around" width={width}>
-            <QuestionTracker
-              currentQuestion={currentQuestionNumber}
-              amountQuestions={totalQuestionsSize}
+        {loading ? (
+          <ActivityIndicator />
+        ) : (
+          <Column>
+            <Row justifyContent="space-around" width={width}>
+              <QuestionTracker
+                currentQuestion={currentQuestionNumber}
+                amountQuestions={totalQuestionsSize}
+              />
+              <ProgressBar time={time} navigation={navigation} />
+              <Score score={totalScore} />
+            </Row>
+
+            <Question
+              question={currentQuestion.question}
+              choices={currentQuestion.choices}
+              onItemSelected={handleAnswerSelection}
+              status={state.type}
             />
-            <ProgressBar time={time} navigation={navigation} />
-            <Score score={totalScore} />
-          </Row>
-
-          <Question
-            question={currentQuestion.question}
-            choices={currentQuestion.choices}
-            onItemSelected={handleAnswerSelection}
-            status={state.type}
-          />
-        </Column>
-      )}
-    </Column>
+          </Column>
+        )}
+      </Column>
+    </ImageBackground>
   );
 };
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0)',
+  },
+});
 
 const mapStateToProps = ({questionsReducer}) => {
   const {

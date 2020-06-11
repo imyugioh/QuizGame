@@ -7,29 +7,28 @@ import Column from '../components/base/Column';
 import Row from '../components/base/Row';
 import Text from '../components/base/Text';
 import ActionButton, {ActionButtonTitle} from '../components/ActionButton';
-import WrongLogo from '../components/WrongLogo';
 
 import theme from '../utils/theme';
 import Score from '../components/Score';
 
 const WrongAnswerView = ({navigation, totalScore}) => {
   return (
-    <Column as={SafeAreaView} flex={1} bg="white">
-      <Column style={{position: 'absolute', top: 40}}>
-        <WrongLogo />
-      </Column>
-
+    <Column as={SafeAreaView} flex={1} bg="black">
       <Column style={{position: 'absolute', bottom: 120}}>
-        <Text color="black" fontSize={28}>
-          Game Over!
+        <Text fontFamily={theme.fontFamily.bold} color="white" fontSize={28}>
+          Game Over!{'\n\n\n\n\n'}
         </Text>
 
-        <Text color="black" fontSize={18}>
-          Maybe next time :(
+        <Text fontFamily={theme.fontFamily.bold} color="white" fontSize={18}>
+          Do your best next time 🙂
         </Text>
 
         <Row mt={20}>
-          <Text mr={10} color="black" fontSize={18}>
+          <Text
+            mr={10}
+            fontFamily={theme.fontFamily.medium}
+            color="white"
+            fontSize={18}>
             You Score:
           </Text>
           <Score score={totalScore} />
@@ -37,10 +36,10 @@ const WrongAnswerView = ({navigation, totalScore}) => {
 
         <ActionButton
           mt={30}
-          borderRadius={30}
+          borderRadius={10}
           onPress={() => navigation.navigate('Home')}
-          bg="green">
-          <ActionButtonTitle color="white">PLAY AGAIN</ActionButtonTitle>
+          bg="white">
+          <ActionButtonTitle color="black">TRY AGAIN</ActionButtonTitle>
         </ActionButton>
       </Column>
     </Column>

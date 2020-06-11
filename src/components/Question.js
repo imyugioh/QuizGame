@@ -12,7 +12,7 @@ function Question({question, choices, onItemSelected, status}) {
   return (
     <Column>
       <Column>
-        <Text m={30} fontSize={18} color="black">
+        <Text m={30} fontFamily="Poppins-Medium" fontSize={16} color="white">
           {question.question}
         </Text>
         <Divider width={width - 50} />

@@ -11,7 +11,6 @@ import WrongAnswerView from './views/WrongAnswerView';
 
 import IconButton from './components/IconButton';
 import ExitIcon from './components/icons/exit';
-//import Text from './components/base/Text';
 
 const Stack = createStackNavigator();
 
@@ -29,7 +28,13 @@ function Navigation() {
           component={QuestionView}
           options={({navigation, route}) => ({
             headerTitleAlign: 'center',
+            headerTitle: 'Select the correct answer',
+            headerTitleStyle: {
+              color: 'white',
+              fontFamily: 'Poppins-Bold',
+            },
             headerStyle: {
+              backgroundColor: 'black',
               elevation: 0,
             },
             headerLeft: () => (

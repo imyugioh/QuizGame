@@ -18,9 +18,7 @@ const ModalView = ({
   loading,
   setVisible,
   categories,
-  questions,
   startGame,
-  selectedCategoryId,
   navigation,
 }) => {
   const [difficulty, setDifficulty] = useState('easy');
@@ -40,7 +38,7 @@ const ModalView = ({
   const renderHeader = () => {
     return (
       <Row justifyContent="flex-start" m={10}>
-        <Text fontSize={18} color="purple">
+        <Text fontSize={18} fontFamily="Poppins-Medium" color="purple">
           All Categories
         </Text>
       </Row>
@@ -54,12 +52,12 @@ const ModalView = ({
         <View>
           {!selectedItem && (
             <View>
-              <Text color="blue">{defaultText}</Text>
+              <Text color="white">{defaultText}</Text>
             </View>
           )}
           {selectedItem && (
             <View>
-              <Text color="blue">{getLabel(selectedItem)}</Text>
+              <Text color="white">{getLabel(selectedItem)}</Text>
             </View>
           )}
         </View>
@@ -81,16 +79,16 @@ const ModalView = ({
   return (
     <Column bg="red">
       <Modal isVisible={visible}>
-        <Column bg="white" p={20} borderRadius={8}>
-          <Text fontSize={24} color="black">
-            LET'S CREATE A QUIZ!
+        <Column bg="grey" p={20} borderRadius={8}>
+          <Text fontFamily="Poppins-Bold" fontSize={24} color="white">
+            Select your level
           </Text>
 
           <Row
             justifyContent="space-evenly"
             width={Dimensions.get('window').width / 2}
             m={10}>
-            <Text color="black" mr={80}>
+            <Text fontFamily="Poppins-Medium" color="white" mr={80}>
               Difficulty
             </Text>
             <CustomPicker
@@ -108,7 +106,7 @@ const ModalView = ({
           <Row
             justifyContent="space-evenly"
             width={Dimensions.get('window').width / 2}>
-            <Text color="black" mr={80}>
+            <Text fontFamily="Poppins-Medium" color="white" mr={80}>
               Category
             </Text>
 
@@ -129,15 +127,17 @@ const ModalView = ({
           </Row>
 
           <ActionButton
-            borderRadius={30}
+            borderRadius={10}
             mt={20}
             onPress={() => {
               startGame(difficulty, selectedCategoryIdState);
               setVisible(!visible);
               setTimeout(() => navigation.navigate('Questions'), 500);
             }}
-            bg="purple">
-            <ActionButtonTitle color="white">START QUIZ</ActionButtonTitle>
+            bg="grey">
+            <ActionButtonTitle color="white" fontSize={20}>
+              START
+            </ActionButtonTitle>
           </ActionButton>
         </Column>
       </Modal>

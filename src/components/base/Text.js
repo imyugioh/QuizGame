@@ -6,6 +6,7 @@ const Text = styled(T)(compose(typography, space, color, size));
 
 Text.defaultProps = {
   letterSpacing: 1,
+  fontFamily: 'Poppins-Regular',
   fontWeight: 'normal',
 };
 export default Text;

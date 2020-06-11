@@ -5,10 +5,10 @@ import Text from './base/Text';
 function AnswerButton({children, ...props}) {
   return (
     <Button
-      minWidth="300px"
-      height="70px"
+      minWidth="200px"
+      height="50px"
       borderRadius="normal"
-      bg="black"
+      bg="white"
       {...props}>
       {children}
     </Button>
@@ -18,7 +18,7 @@ function AnswerButton({children, ...props}) {
 export function AnswerButtonTitle({children, ...props}) {
   return (
     <Text
-      color="white"
+      color="black"
       fontWeight="bold"
       style={{textTransform: 'uppercase'}}
       {...props}>

@@ -8,7 +8,7 @@ function Score({score}) {
   return (
     <Row>
       <CoinIcon />
-      <Text fontSize={18} color="lightGrey">
+      <Text fontFamily="Poppins-Bold" fontSize={18} color="lightGrey">
         {score}
       </Text>
     </Row>

@@ -17,6 +17,9 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* QuizGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* QuizGameTests.m */; };
 		5AF54D3D26AAE5D6800C3028 /* libPods-QuizGame-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F165767AFDC2C9497FFD011 /* libPods-QuizGame-tvOSTests.a */; };
+		66D30C3824912DF600176E6A /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66D30C3524912DF600176E6A /* Poppins-Medium.ttf */; };
+		66D30C3924912DF600176E6A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66D30C3624912DF600176E6A /* Poppins-Bold.ttf */; };
+		66D30C3A24912DF600176E6A /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66D30C3724912DF600176E6A /* Poppins-Regular.ttf */; };
 		B721D84EB21262CDE8455D24 /* libPods-QuizGame-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F418BE7FFEA144B766858D54 /* libPods-QuizGame-tvOS.a */; };
 		BD9FB04F16353F7BE9DB38F5 /* libPods-QuizGame-QuizGameTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3EA2DC4405A7D677A332E62 /* libPods-QuizGame-QuizGameTests.a */; };
 		EB140E40FB72F591DB826191 /* libPods-QuizGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D6C1DA98F9D4BA8706CAB6 /* libPods-QuizGame.a */; };
@@ -55,6 +58,9 @@
 		2D02E47B1E0B4A5D006451C7 /* QuizGame-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QuizGame-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* QuizGame-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QuizGame-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F165767AFDC2C9497FFD011 /* libPods-QuizGame-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuizGame-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D30C3524912DF600176E6A /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		66D30C3624912DF600176E6A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		66D30C3724912DF600176E6A /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		782630315108CE6B62709DC2 /* Pods-QuizGame-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizGame-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-QuizGame-tvOS/Pods-QuizGame-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		81D6C1DA98F9D4BA8706CAB6 /* libPods-QuizGame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuizGame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF0AF0A283F0228BB76CCC4 /* Pods-QuizGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizGame.release.xcconfig"; path = "Target Support Files/Pods-QuizGame/Pods-QuizGame.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +170,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		66D30C3424912DE300176E6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66D30C3624912DF600176E6A /* Poppins-Bold.ttf */,
+				66D30C3524912DF600176E6A /* Poppins-Medium.ttf */,
+				66D30C3724912DF600176E6A /* Poppins-Regular.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +190,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				66D30C3424912DE300176E6A /* Resources */,
 				13B07FAE1A68108700A75B9A /* QuizGame */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* QuizGameTests */,
@@ -291,6 +308,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 84R455B6XH;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -337,6 +355,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66D30C3824912DF600176E6A /* Poppins-Medium.ttf in Resources */,
+				66D30C3924912DF600176E6A /* Poppins-Bold.ttf in Resources */,
+				66D30C3A24912DF600176E6A /* Poppins-Regular.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -372,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -629,22 +650,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84R455B6XH;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
 				INFOPLIST_FILE = QuizGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trivia.suan.quizgame;
 				PRODUCT_NAME = QuizGame;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -656,16 +679,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84R455B6XH;
 				INFOPLIST_FILE = QuizGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.trivia.suan.quizgame;
 				PRODUCT_NAME = QuizGame;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

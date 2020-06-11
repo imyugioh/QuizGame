@@ -38,7 +38,11 @@ const ProgressBar = ({time, navigation}) => {
         backgroundColor={theme.colors.lightGrey}
       />
 
-      <Text style={{position: 'absolute', top: 20}} fontSize={18}>
+      <Text
+        style={{position: 'absolute', top: 20}}
+        fontFamily="Poppins-Bold"
+        color="white"
+        fontSize={18}>
         {timer}
       </Text>
     </Column>
