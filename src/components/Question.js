@@ -13,7 +13,7 @@ function Question({question, choices, onItemSelected, status}) {
     <Column>
       <Column>
         <Text m={30} fontFamily="Poppins-Medium" fontSize={16} color="white">
-          {question.question}
+          {question.question.replace(/&#039;/g, "'").replace(/&quot;/g, '"')}
         </Text>
         <Divider width={width - 50} />
         <Column mt={30}>

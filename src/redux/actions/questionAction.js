@@ -31,7 +31,7 @@ export const fetchAllCategories = () => {
 
 export const fetchQuestions = (selectedDifficulty, selectedCategoryId) => {
   return (dispatch) => {
-    getData(10, selectedDifficulty, selectedCategoryId)
+    getData(15, selectedDifficulty, selectedCategoryId)
       .then(({results}) => {
         const editedQuestions = results.map((result) => {
           let choices = result.incorrect_answers;

@@ -5,7 +5,7 @@ import Text from './base/Text';
 function AnswerButton({children, ...props}) {
   return (
     <Button
-      minWidth="200px"
+      minWidth="300px"
       height="50px"
       borderRadius="normal"
       bg="white"

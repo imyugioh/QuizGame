@@ -1,5 +1,5 @@
 export const getData = async (
-  amount = '10',
+  amount = '15',
   difficulty = 'easy',
   category = '9',
 ) => {
