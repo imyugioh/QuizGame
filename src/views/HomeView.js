@@ -79,7 +79,7 @@ const HomeView = ({categories, fetchAllCategories, loading, navigation}) => {
 
         <Column flex={1}>
           <ActionButton mt={40} onPress={() => setVisible(!visible)} bg="white">
-            <ActionButtonTitle color="grey">Let's Start</ActionButtonTitle>
+            <ActionButtonTitle color="grey">PlAY</ActionButtonTitle>
           </ActionButton>
         </Column>
 
